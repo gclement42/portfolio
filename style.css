@@ -1,0 +1,155 @@
+body 
+{
+    /* font-family: "Quicksand", sans-serif; */
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: center;
+}
+
+header
+{
+    display: flex;
+    margin: 2%;
+    align-items: center;
+}
+
+.header-title > p 
+{
+    font-style: italic;
+}
+
+.segments
+{
+    margin: 0 5%;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    width: 75%;
+    height: 95%;
+}
+
+.profile-picture
+{
+    width: 10%;
+    border-radius: 50%;
+    margin: 0% 5%;
+}
+
+.list
+{
+    position: relative;
+    font-size: 2em;
+    list-style-type: none;
+}
+
+.list-skills-icon
+{
+    width: 50px;
+}
+
+.btn
+{
+    border: none;
+    background: none;
+}
+
+.btn-project
+{
+    font-size: large;
+    /* margin: 2%; */
+    transition: transform 0.3s ease;
+}
+
+.close-cross 
+{
+    transition: transform 0.3s ease;
+}
+
+.btn:hover
+{
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.close-cross:hover {
+    cursor: pointer;
+    transform: scale(1.2); 
+}
+
+.contact-me
+{
+    width: 50% ;
+    margin: 10% 25%;
+}
+
+.form-field
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info, .skill-info
+{
+    display: none;
+    position: absolute;
+    /* padding: 5%; */
+}
+
+.project-info
+{
+    right: -5%;
+}
+
+.project-title
+{
+    font-size: 1em;
+}
+
+.project-info-header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-info h2 
+{
+    margin-top: 0;
+}
+
+.skills 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-lists
+{
+    display: flex;
+}
+
+.btn-skills 
+{
+    margin: 0% 1%;
+}
+
+.contact-me
+{
+    background-color: rgba(122, 122, 122, 0.445);
+    padding: 5%;
+}
+
+/* .btn-project:hover 
+{
+    margin: 1% 2%;
+}
+
+.close-cross:hover 
+{
+    margin: 0.1%;
+} */
