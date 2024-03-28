@@ -3,79 +3,133 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="main.js"></script>
+        <script type="module" src="main.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/xp.css" />
         <script src="https://kit.fontawesome.com/f7996aafde.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-        <title>Portofolio</title>
+        <title>Portfolio</title>
 </head>
 <body>
-<div class="content">
-    <header>
-        <img
-        class="profile-picture"
-        src="/assets/gclement.jpg"
-        alt="gerardin clement profile picture" />
-        <div class="header-title">
-            <h1>GERARDIN Clement</h1>
-            <p>Developer</p>
+    <img class="background-img" src="assets\windows-xp-wallpaper.jpg" alt="windows-xp-wallpaper">
+    <div class="desktop">
+        <div class="folder" id="projects">
+            <img src="assets\folder-icon.png" alt="folder-icon">
+            <p>Projects</p>
         </div>
-    </header>
-    <main class="segments">
-        <h2> My main projects</h2>
-        <ul class="list list-project">
-            <li>
-                <button class="btn-project" id="transcendence">Transcendence</button>
-                <div class="project-info window" id="transcendence-info">
-                    <div class="project-info-header title-bar" id="transcendence-info">
-                    </div>
-                    <div class="window-body">
-                        <p>This is the information about the Transcendence project.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <button class="btn-project" id="cub3d">Cub3d</button>
-                <div class="project-info window cub3d-info" id="cub3d-info">
-                    <div class="project-info-header title-bar">
-                        <h3 class="project-title">Cub3d</h2>
-                        <i class="fa-solid fa-circle-xmark close-cross"></i>
-                    </div>
-                    <div class="window-body">
-                        <p>This is the information about the Transcendence project.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <button class="btn-project" id="minishell">Minishell</button>
-                <div class="project-info window" id="minishell-info">
-                    <div class="project-info-header title-bar">
-                        <h3 class="project-title">Minishell</h2>
-                        <i class="fa-solid fa-circle-xmark close-cross"></i>
-                    </div>
-                    <div class="window-body">
-                        <p>This is the information about the Transcendence project.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <button class="btn-project" id="groupomania">Groupomania</button>
-                <div class="project-info window" id="groupomania-info">
-                    <div class="project-info-header title-bar">
-                        <h3 class="project-title">Groupomania</h2>
-                        <i class="fa-solid fa-circle-xmark close-cross"></i>
-                    </div>
-                    <div class="window-body">
-                        <p>This is the information about the Transcendence project.</p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </main>
-    <div class="skills segments">
+        <div class="folder" id="skills">
+            <img src="assets\folder-icon.png" alt="folder-icon">
+            <p>Skills</p>
+        </div>
+    </div>
+
+    <div class="projects window window-folder" id="projects-folder">
+        <div class="projects-info-header title-bar" id="projects-folder-header">
+            <p>Projects</p>
+        </div>
+        <div class="folder-content">
+            <div class="folder" id="transcendence">
+                <img src="assets\folder-icon.png" alt="folder-icon">
+                <p>Transcendence</p>
+            </div>
+            <div class="folder" id="cub3d">
+                <img src="assets\folder-icon.png" alt="folder-icon">
+                <p>Cub3d</p>
+            </div>
+            <div class="folder" id="groupomania">
+                <img src="assets\folder-icon.png" alt="folder-icon">
+                <p>Groupomania</p>
+            </div>
+            <div class="folder" id="minishell">
+                <img src="assets\folder-icon.png" alt="folder-icon">
+                <p>Minishell</p>
+            </div>
+            <div class="folder" id="ft_irc">
+                <img src="assets\folder-icon.png" alt="folder-icon">
+                <p>ft_irc</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects window window-folder" id="skills-folder">
+        <div class="projects-info-header title-bar">
+            <p>Skills</p>
+        </div>
+        <div class="folder-content">
+            <div class="folder" id="skill-c">
+                <img src="assets\note-icon.png" alt="note-icon">
+                <p>C</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="project-info window window-notepad" id="skill-c-folder">
+        <div class="title-bar">
+            <p>C</p>
+        </div>
+        <div class="tool-bar">
+            <button>File</button>
+            <button>Edit</button>
+            <button>Format</button>
+            <button>View</button>
+            <button>Help</button>
+        </div>
+        <div class="folder-content notepad">
+            <p>My main projects in C</p>
+            <span> I learned the C with 42 Lyon</span>
+            <ul>
+                <li><a href="https://github.com/gclement42/minishell">Minishell</a></li>
+                <li><a href="https://github.com/Atroooo/Cub3D">Cub3d</a></li>
+                <li><a href="https://github.com/gclement42/philosophers">Philosophers</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--  Projects Info -->
+    <div class="project-info window window-folder" id="transcendence-folder">
+        <div class="title-bar">
+            <p>Transcendence</p>
+        </div>
+        <div class="folder-content">
+            <p>Some Transcendence info</p>
+        </div>
+    </div>
+    <div class="project-info window window-folder" id="cub3d-folder">
+        <div class="title-bar">
+            <p>Cub3d</p>
+        </div>
+        <div class="folder-content">
+            <p>Some cub3d info</p>
+        </div>
+    </div>
+    <div class="project-info window window-folder" id="minishell-folder">
+        <div class="title-bar">
+            <p>minishell</p>
+        </div>
+        <div class="folder-content">
+            <p>Some minishell info</p>
+        </div>
+    </div>
+    <div class="project-info window window-folder" id="groupomania-folder">
+        <div class="title-bar">
+            <p>groupomania</p>
+        </div>
+        <div class="folder-content">
+            <p>Some groupomania info</p>
+        </div>
+    </div>
+    <div class="project-info window window-folder" id="ft_irc-folder">
+        <div class="title-bar">
+            <p>ft_irc</p>
+        </div>
+        <div class="folder-content">
+            <p>Some ft_irc info</p>
+        </div>
+    </div>
+    <!-- <div class="skills segments">
         <h2>Skills</h2>
         <div class="skills-lists">
             <button class="btn btn-skills" >
@@ -137,8 +191,8 @@
             </div>
             <button type="submit">Envoyer</button>
         </form>
-    </div>
-</div>
+    </div> -->
+<!-- </div> -->
     
 </body>
 </html>
