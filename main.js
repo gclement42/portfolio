@@ -23,6 +23,41 @@ function createTitleBarControls(element) {
     });
 }
 
+const windows = document.querySelectorAll('.window-folder');
+let offsetX, offsetY, isDragging = false, currentWindow;
+
+function startDragging(e) {
+    isDragging = true;
+    currentWindow = this.parentNode;
+    // console.log(currentWindow.style.left, currentWindow.style.top);
+    offsetX = e.clientX;
+    offsetY = e.clientY;
+    document.addEventListener('mousemove', dragWindow);
+    document.addEventListener('mouseup', stopDragging);
+}
+
+// Fonction pour déplacer la fenêtre
+function dragWindow(e) {
+    if (isDragging) {
+        const x = e.clientX - offsetX;
+        const y = e.clientY - offsetY;
+        currentWindow.style.left = `${x}px`;
+        currentWindow.style.top = `${y}px`;
+    }
+}
+
+// Fonction pour arrêter le déplacement
+function stopDragging() {
+    isDragging = false;
+    document.removeEventListener('mousemove', dragWindow);
+    document.removeEventListener('mouseup', stopDragging);
+}
+
+windows.forEach(function(window) {
+    const titleBar = window.querySelector('.title-bar');
+    titleBar.addEventListener('mousedown', startDragging);
+});
+
 document.addEventListener('DOMContentLoaded', function() {
      
     const btnProjects = document.querySelectorAll('.folder');

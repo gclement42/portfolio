@@ -162,6 +162,7 @@ header
 .title-bar {
     display: flex;
     justify-content: space-between;
+    cursor: move;
 }
 
 .tool-bar > button {
