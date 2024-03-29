@@ -1,5 +1,9 @@
 let closeButtons = document.querySelectorAll('.close-cross');
 
+function removePx(value) {
+    return value.replace('px', '');
+}
+
 function createTitleBarControls(element) {
     if (element.children.length > 1) 
         return;
@@ -23,20 +27,19 @@ function createTitleBarControls(element) {
     });
 }
 
+
 const windows = document.querySelectorAll('.window-folder');
 let offsetX, offsetY, isDragging = false, currentWindow;
 
 function startDragging(e) {
     isDragging = true;
     currentWindow = this.parentNode;
-    // console.log(currentWindow.style.left, currentWindow.style.top);
-    offsetX = e.clientX;
-    offsetY = e.clientY;
+    offsetX = e.clientX - removePx(currentWindow.style.left);
+    offsetY = e.clientY - removePx(currentWindow.style.top);
     document.addEventListener('mousemove', dragWindow);
     document.addEventListener('mouseup', stopDragging);
 }
 
-// Fonction pour déplacer la fenêtre
 function dragWindow(e) {
     if (isDragging) {
         const x = e.clientX - offsetX;
@@ -46,7 +49,6 @@ function dragWindow(e) {
     }
 }
 
-// Fonction pour arrêter le déplacement
 function stopDragging() {
     isDragging = false;
     document.removeEventListener('mousemove', dragWindow);
