@@ -28,12 +28,13 @@ function createTitleBarControls(element) {
 }
 
 
-const windows = document.querySelectorAll('.window-folder');
+const windows = document.querySelectorAll('.window');
 let offsetX, offsetY, isDragging = false, currentWindow;
 
 function startDragging(e) {
     isDragging = true;
     currentWindow = this.parentNode;
+    console.log('currentWindow: ', currentWindow);
     offsetX = e.clientX - removePx(currentWindow.style.left);
     offsetY = e.clientY - removePx(currentWindow.style.top);
     document.addEventListener('mousemove', dragWindow);
@@ -44,6 +45,10 @@ function dragWindow(e) {
     if (isDragging) {
         const x = e.clientX - offsetX;
         const y = e.clientY - offsetY;
+        if (x + currentWindow.offsetWidth >= window.innerWidth || y * 2 >= window.innerHeight) {
+            console.log('out of bounds');
+            return;
+        }
         currentWindow.style.left = `${x}px`;
         currentWindow.style.top = `${y}px`;
     }
