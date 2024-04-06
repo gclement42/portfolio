@@ -63,25 +63,6 @@ header
     width: 50px;
 }
 
-.btn
-{
-    border: none;
-    background: none;
-}
-
-.btn-project
-{
-    font-size: large;
-    /* margin: 2%; */
-    transition: transform 0.3s ease;
-}
-
-.btn:hover
-{
-    cursor: pointer;
-    transform: scale(1.5);
-}
-
 .contact-me
 {
     width: 50% ;
@@ -145,17 +126,22 @@ header
     padding: 5%;
 }
 
-/* .desktop
+.desktop
 {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-} */
+    margin: 1%;
+}
 
-.project-info
-{
-    /* bottom: 0%; */
-    /* left: 25%; */
+.folder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 5%;
+}
+
+.folder > img {
+    width: 40px;
+    height: 40px;
 }
 
 .title-bar {
@@ -199,13 +185,6 @@ header
     display: none;
 }
 
-.folder {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2% 5%;
-}
 
 .folder:hover {
     cursor: pointer;
@@ -222,15 +201,19 @@ header
     flex-wrap: wrap;
     align-items: start; 
     margin: 5% 0;   
+    /* width: auto;
+    height: auto;
+    max-height: 85vh; */
 }
 
 .notepad {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-wrap: nowrap;
     align-items: start;
     margin: 2% 5%;
-
+    overflow: scroll;
 }
 
 .taskbar{
@@ -264,8 +247,8 @@ header
 }
 
 .cub3d-demo {
-    width: 35%;
-    height: 35%;
+    width: auto;
+    height: auto;
 }
 
 h2 {
